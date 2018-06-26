@@ -1,0 +1,12 @@
+.c-Arrangement .ui.disabled.input,
+.c-Arrangement input[disabled] {
+    opacity: 1 !important;
+    color: #333 !important;
+}
+
+.c-Arrangement .ui.disabled.textarea,
+.c-Arrangement textarea[disabled]  {
+    opacity: 1 !important;
+    color: #333 !important;
+    border: none;
+}
