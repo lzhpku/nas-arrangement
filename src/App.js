@@ -6,6 +6,7 @@ import DisplayArrangement from "./pages/DisplayArrangement";
 import HomePage from "./pages/HomePage";
 import ApplyArrangement from "./pages/ApplyArrangement";
 import About from './pages/About';
+import OrderPage from './pages/ListOrder';
 
 import './app.css';
 
@@ -29,6 +30,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path={['/', '/index']} component={HomePage} />
                         <Route exact path="/post" component={ApplyArrangement} />
+                        <Route exact path="/order" component={OrderPage}/>
                         <Route exact path="/arrangement/:arrangementId" component={DisplayArrangement} />
                         <Route exact path="/about" component={About} />
                     </Switch>

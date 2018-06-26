@@ -53,6 +53,18 @@ class Header extends Component {
                 </Menu.Item>
 
                 <Menu.Item
+                    name='female'
+                    active={this.props.location.pathname === '/order'}
+                    onClick={this.handleSwitchPage('/order')}
+                    style={{
+                        color: '#fff',
+                        fontSize: '16px'
+                    }}
+                >
+                    我的约会
+                </Menu.Item>
+
+                <Menu.Item
                     name='upcomingEvents'
                     active={this.props.location.pathname === '/about'}
                     onClick={this.handleSwitchPage('/about')}
