@@ -26,12 +26,12 @@ class HomePage extends Component {
 
     sortList(list) {
         return list.sort(function (a, b) {
-            return b.fondCount - a.fondCount;
+            return b.paidCount - a.paidCount;
         });
     }
 
     componentDidMount() {
-        getArrangementList(this.state.curPage, "female")
+        getArrangementList(this.state.curPage)
             .then(res => {
                 this.setState({
                     list: this.sortList(res.list),

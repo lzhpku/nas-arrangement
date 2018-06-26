@@ -16,11 +16,8 @@ const cvtArrangement = (arrangement) => {
         nick,
         sex,
         age,
-        tel,
-        wechat,
         address,
         profession,
-        hobby,
         pic1,
         pic2,
         pic3,
@@ -28,8 +25,7 @@ const cvtArrangement = (arrangement) => {
         price,
         createTime,
         paidCount,
-        fondCount,
-        status,
+        orderedCount,
         arrangementId,
     } = arrangement;
     return {
@@ -37,11 +33,10 @@ const cvtArrangement = (arrangement) => {
         nick,
         sex,
         age,
-        tel: CryptoJS.AES.decrypt(tel, cry).toString(CryptoJS.enc.Utf8),
-        wechat: CryptoJS.AES.decrypt(wechat, cry).toString(CryptoJS.enc.Utf8),
+        // tel: CryptoJS.AES.decrypt(tel, cry).toString(CryptoJS.enc.Utf8),
+        // wechat: CryptoJS.AES.decrypt(wechat, cry).toString(CryptoJS.enc.Utf8),
         address,
         profession,
-        hobby,
         pic1,
         pic2,
         pic3,
@@ -49,9 +44,8 @@ const cvtArrangement = (arrangement) => {
         price,
         createTime,
         paidCount,
-        fondCount,
+        orderedCount,
         arrangementId,
-        ifPaid: status === 0 || status === 1,
     };
 }
 
@@ -60,11 +54,8 @@ export const postArrangement = (title,
                           nick,
                           sex,
                           age,
-                          tel,
-                          wechat,
                           address,
                           profession,
-                          hobby,
                           pic1,
                           pic2,
                           pic3,
@@ -77,11 +68,10 @@ export const postArrangement = (title,
                 nick,
                 sex,
                 age,
-                CryptoJS.AES.encrypt(tel, cry).toString(),
-                CryptoJS.AES.encrypt(wechat, cry).toString(),
+                // CryptoJS.AES.encrypt(tel, cry).toString(),
+                // CryptoJS.AES.encrypt(wechat, cry).toString(),
                 address,
                 profession,
-                hobby,
                 pic1,
                 pic2,
                 pic3,
@@ -148,7 +138,7 @@ export const getArrangement = (arrangementId) => {
     });
 }
 
-export const getArrangementList = (curPage = 1, sex) => {
+export const getArrangementList = (curPage = 1) => {
     const perPage = 100;
 
     return new Promise((resolve) => {
@@ -158,7 +148,7 @@ export const getArrangementList = (curPage = 1, sex) => {
             value: 0,
             contract: {
                 function: 'getArrangementList',
-                args: JSON.stringify([perPage, (curPage - 1) * perPage, sex]),
+                args: JSON.stringify([perPage, (curPage - 1) * perPage]),
             },
             gasPrice: 1000000,
             gasLimit: 2000000,

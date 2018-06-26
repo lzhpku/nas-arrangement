@@ -34,7 +34,7 @@ class Arrangement extends Component {
             price,
             [type]: e1.target.value || e2.value,
         });
-        console.log(this.props.ifPaid);
+        console.log(this.props.type);
     }
 
     render() {

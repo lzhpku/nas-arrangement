@@ -10,11 +10,8 @@ class ApplyArrangement extends Component {
         nick: '',
         sex: '',
         age: '',
-        tel: '',
-        wechat: '',
         address: '',
         profession: '',
-        hobby: '',
         pic1: '',
         pic2: '',
         pic3: '',
@@ -50,11 +47,8 @@ class ApplyArrangement extends Component {
             nick,
             sex,
             age,
-            tel,
-            wechat,
             address,
             profession,
-            hobby,
             pic1,
             pic2,
             pic3,
@@ -66,11 +60,8 @@ class ApplyArrangement extends Component {
             nick,
             sex,
             age,
-            tel,
-            wechat,
             address,
             profession,
-            hobby,
             pic1,
             pic2,
             pic3,
@@ -104,7 +95,7 @@ class ApplyArrangement extends Component {
                         trigger={
                             <Button
                                 onClick={this.handleTriggerOpenPriceDialog}
-                                disabled={!this.state.title || !(this.state.tel || this.state.wechat)}
+                                disabled={!this.state.title || !this.state.nick || !this.state.sex || !this.state.age || !this.state.description}
                                 style={{
                                     width: '200px'
                                 }}

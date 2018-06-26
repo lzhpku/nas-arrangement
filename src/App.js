@@ -28,8 +28,8 @@ class App extends Component {
                 <HashRouter onUpdate={(e) => {console.log(e)}}>
                     <Switch>
                         <Route exact path={['/', '/index']} component={HomePage} />
-                        <Route exact path="/post" component={DisplayArrangement} />
-                        <Route exact path="/arrangement/:arrangementId" component={ApplyArrangement} />
+                        <Route exact path="/post" component={ApplyArrangement} />
+                        <Route exact path="/arrangement/:arrangementId" component={DisplayArrangement} />
                         <Route exact path="/about" component={About} />
                     </Switch>
                 </HashRouter >
