@@ -9,6 +9,7 @@ class ArrangementCard extends Component {
     handleClick = () => {
         this.props.history.push(`/arrangement/${this.props.arrangementId}`);
     }
+
     render() {
         const { title, nick, age, address, pic1, createTime, paidCount, orderedCount } = this.props;
         return (

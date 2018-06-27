@@ -18,6 +18,7 @@ class HomePage extends Component {
         pad: 2,
         pc: 4,
     }
+
     state = {
         curPage: 1,
         perRow: 4,

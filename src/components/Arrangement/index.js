@@ -38,8 +38,6 @@ class Arrangement extends Component {
             status,
             [type]: e1.target.value || e2.value,
         });
-        console.log(this.props.type);
-        console.log(this.props.status);
     }
 
     render() {

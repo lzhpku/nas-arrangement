@@ -133,22 +133,6 @@ export const applyArrangement = (arrangementId, price) => {
     });
 }
 
-export const fondArrangement = (arrangementId) => {
-    return new Promise((resolve) => {
-        nebPay.call(config[env]['contract_address'], 0, 'fondArrangement',
-            JSON.stringify([arrangementId]), {
-                qrcode: {
-                    showQRCode: false
-                },
-                listener: (res) => {
-                    if (res.txhash) {
-                        resolve(res);
-                    }
-                }
-        });
-    });
-}
-
 export const getArrangement = (arrangementId) => {
     return new Promise((resolve) => {
         nebPay.simulateCall(config[env]['contract_address'], 0, 'getArrangement',
@@ -174,7 +158,9 @@ export const getOrderList = (status) => {
                 },
                 listener: (res) => {
                     resolve({
-                        arrangement: cvtOrder(JSON.parse(res.result)),
+                        list: JSON.parse(res.result).map(item => (
+                            cvtOrder(item)
+                        )),
                     });
                 }
             });
