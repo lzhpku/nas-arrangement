@@ -20,9 +20,8 @@ class OrderRow extends Component {
 
         return (
             <Table.Row>
-                <Table.Cell>{orderId}</Table.Cell>
-                <Table.Cell>{createTime}</Table.Cell>
                 <Table.Cell>{title}</Table.Cell>
+                <Table.Cell>{createTime}</Table.Cell>
                 <Table.Cell>{price}</Table.Cell>
                 <Table.Cell>{contract}</Table.Cell>
                 <Table.Cell>{description}</Table.Cell>

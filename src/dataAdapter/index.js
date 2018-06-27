@@ -117,10 +117,10 @@ export const postArrangement = (title,
     });
 }
 
-export const applyArrangement = (arrangementId, price) => {
+export const applyArrangement = (arrangementId, contract, description, price) => {
     return new Promise((resolve) => {
         nebPay.call(config[env]['contract_address'], price, 'applyArrangement',
-            JSON.stringify([arrangementId]), {
+            JSON.stringify([arrangementId, contract, description]), {
                 qrcode: {
                     showQRCode: false
                 },

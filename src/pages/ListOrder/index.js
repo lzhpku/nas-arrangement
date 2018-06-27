@@ -95,12 +95,11 @@ class OrderPage extends Component {
                         <Table striped>
                             <Table.Header>
                                 <Table.Row>
-                                    <Table.HeaderCell>ID</Table.HeaderCell>
+                                    <Table.HeaderCell>约会名称</Table.HeaderCell>
                                     <Table.HeaderCell>创建时间</Table.HeaderCell>
-                                    <Table.HeaderCell>标题</Table.HeaderCell>
                                     <Table.HeaderCell>价格</Table.HeaderCell>
                                     <Table.HeaderCell>联系方式</Table.HeaderCell>
-                                    <Table.HeaderCell>内容</Table.HeaderCell>
+                                    <Table.HeaderCell>自我介绍</Table.HeaderCell>
                                     <Table.HeaderCell>操作</Table.HeaderCell>
                                 </Table.Row>
                             </Table.Header>
