@@ -4,7 +4,7 @@ import PageHeader from '../../components/Header';
 import { postArrangement } from '../../dataAdapter';
 import Arrangement from '../../components/Arrangement';
 
-class ApplyArrangement extends Component {
+class PostArrangement extends Component {
     state = {
         title: '',
         nick: '',
@@ -187,7 +187,7 @@ class ApplyArrangement extends Component {
     }
 }
 
-ApplyArrangement.propTypes = {};
-ApplyArrangement.defaultProps = {};
+PostArrangement.propTypes = {};
+PostArrangement.defaultProps = {};
 
-export default ApplyArrangement;
+export default PostArrangement;

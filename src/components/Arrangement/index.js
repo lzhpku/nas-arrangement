@@ -120,7 +120,7 @@ class Arrangement extends Component {
                                     labelPosition='right'
                                 >
                                     <Button
-                                        onClick={this.props.onLike}
+                                        onClick={this.props.applyOrder}
                                         color='pink'
                                         style={{
                                             backgroundColor: '#f798b4',
@@ -490,6 +490,7 @@ Arrangement.defaultProps = {
     orderedCount: 0,
     status: '',
     onChange: () => {},
+    applyOrder: () => {},
 };
 
 export default Arrangement;

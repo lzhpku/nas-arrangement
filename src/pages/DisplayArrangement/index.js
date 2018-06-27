@@ -4,7 +4,7 @@ import { Button, Icon, Modal } from 'semantic-ui-react';
 import { withRouter } from 'react-router';
 import PageHeader from '../../components/Header';
 
-import { getArrangement, checkArrangement, fondArrangement } from '../../dataAdapter';
+import { getArrangement, applyArrangement } from '../../dataAdapter';
 
 class DisplayArrangement extends Component {
 
@@ -19,8 +19,8 @@ class DisplayArrangement extends Component {
                 })
             })
     }
-    handlePay = () => {
-        checkArrangement(this.props.match.params.arrangementId, this.state.price)
+    applyOrder = () => {
+        applyArrangement(this.props.match.params.arrangementId, this.state.price)
             .then(res => {
                 this.setState({
                     ifWaitforWriteChainDialogOpen: true,
@@ -32,14 +32,6 @@ class DisplayArrangement extends Component {
             ifWaitforWriteChainDialogOpen: false,
         })
     }
-    handleLike = () => {
-        fondArrangement(this.props.match.params.arrangementId)
-            .then(res => {
-                this.setState({
-                    ifWaitforWriteChainDialogOpen: true,
-                })
-            })
-    }
     render() {
         return (
             <div>
@@ -47,8 +39,7 @@ class DisplayArrangement extends Component {
 
                 <Arrangement
                     type="read"
-                    onLike={this.handleLike}
-                    onPay={this.handlePay}
+                    applyOrder={this.applyOrder}
                     {...this.state}
                 >
                 </Arrangement>

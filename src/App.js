@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 
 import DisplayArrangement from "./pages/DisplayArrangement";
 import HomePage from "./pages/HomePage";
-import ApplyArrangement from "./pages/ApplyArrangement";
+import PostArrangement from "./pages/PostArrangement";
 import About from './pages/About';
 import OrderPage from './pages/ListOrder';
 
@@ -29,7 +29,7 @@ class App extends Component {
                 <HashRouter onUpdate={(e) => {console.log(e)}}>
                     <Switch>
                         <Route exact path={['/', '/index']} component={HomePage} />
-                        <Route exact path="/post" component={ApplyArrangement} />
+                        <Route exact path="/post" component={PostArrangement} />
                         <Route exact path="/order" component={OrderPage}/>
                         <Route exact path="/arrangement/:arrangementId" component={DisplayArrangement} />
                         <Route exact path="/about" component={About} />
