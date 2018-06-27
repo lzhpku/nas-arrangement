@@ -15,6 +15,7 @@ class OrderPage extends Component {
     state = {
         activeItem: '待确认',
         list: [],
+        status: 0,
     }
 
     componentDidMount() {
@@ -28,6 +29,22 @@ class OrderPage extends Component {
     }
 
     handleItemClick = (e, {name}) => {
+        if (name == '待确认') {
+            this.state.status = 0;
+        } else if (name == '进行中') {
+            this.state.status = 1;
+        } else if (name == '已完成') {
+            this.state.status = 3;
+        } else if (name == '已取消') {
+            this.state.status = 2;
+        }
+        getOrderList(this.state.status)
+            .then(res => {
+                console.log(res);
+                this.setState({
+                    list: res.list,
+                })
+            })
         this.setState({
             activeItem: name
         })
