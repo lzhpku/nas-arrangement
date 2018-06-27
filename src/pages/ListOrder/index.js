@@ -6,15 +6,23 @@ import { Menu, Segment, Header, TextArea, Table,
     Grid, Card, Responsive,
 } from 'semantic-ui-react';
 import { withRouter } from 'react-router';
-import ArrangementCard from '../../components/ArrangementCard';
 import PageHeader from '../../components/Header';
 import { detectScreenType } from '../../utils';
 
-import { getArrangementList } from '../../dataAdapter';
+import { getOrderList } from '../../dataAdapter';
 
 class OrderPage extends Component {
     state = {
-        activeItem: '进行中'
+        activeItem: '待确认'
+    }
+
+    componentDidMount() {
+        getOrderList(0)
+            .then(res => {
+                this.setState({
+                    list: res.list,
+                })
+            })
     }
 
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
@@ -41,22 +49,22 @@ class OrderPage extends Component {
                         tabular
                     >
                         <Menu.Item
-                            name='待确认'
+                            name='待确认' // 0
                             active={activeItem === '待确认'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='进行中'
+                            name='进行中' // 1
                             active={activeItem === '进行中'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='已完成'
+                            name='已完成' // 3
                             active={activeItem === '已完成'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='已取消'
+                            name='已取消' // 2
                             active={activeItem === '已取消'}
                             onClick={this.handleItemClick}
                         />

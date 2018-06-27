@@ -10,6 +10,7 @@ neb.setRequest(new HttpRequest(config[env]['contact_host']))
 const cry = "n1zgzRFoweYNkvhmEY7vcWJuYDjVYXVcwro";
 const CryptoJS = require("crypto-js");
 
+
 const cvtArrangement = (arrangement) => {
     const {
         title,
@@ -51,6 +52,30 @@ const cvtArrangement = (arrangement) => {
     };
 }
 
+const cvtOrder = (order) => {
+    const {
+        arrangementId,
+        orderId,
+        createTime,
+        price,
+        title,
+        contract,
+        description,
+        status,
+        operation,
+    } = order;
+    return {
+        arrangementId,
+        orderId,
+        createTime,
+        price,
+        title,
+        contract,
+        description,
+        status,
+        operation,
+    };
+}
 
 export const postArrangement = (title,
                           nick,
@@ -137,6 +162,22 @@ export const getArrangement = (arrangementId) => {
                     });
                 }
         });
+    });
+}
+
+export const getOrderList = (status) => {
+    return new Promise((resolve) => {
+        nebPay.simulateCall(config[env]['contract_address'], 0, 'getUserOrderList',
+            JSON.stringify([status]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    resolve({
+                        arrangement: cvtOrder(JSON.parse(res.result)),
+                    });
+                }
+            });
     });
 }
 
