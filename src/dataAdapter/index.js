@@ -149,24 +149,6 @@ export const getArrangement = (arrangementId) => {
     });
 }
 
-export const getOrderList = (status) => {
-    return new Promise((resolve) => {
-        nebPay.simulateCall(config[env]['contract_address'], 0, 'getUserOrderList',
-            JSON.stringify([status]), {
-                qrcode: {
-                    showQRCode: false
-                },
-                listener: (res) => {
-                    resolve({
-                        list: JSON.parse(res.result).map(item => (
-                            cvtOrder(item)
-                        )),
-                    });
-                }
-            });
-    });
-}
-
 export const getArrangementList = (curPage = 1) => {
     const perPage = 100;
 
@@ -192,3 +174,84 @@ export const getArrangementList = (curPage = 1) => {
     });
 }
 
+export const getOrderList = (status) => {
+    return new Promise((resolve) => {
+        nebPay.simulateCall(config[env]['contract_address'], 0, 'getUserOrderList',
+            JSON.stringify([status]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    resolve({
+                        list: JSON.parse(res.result).map(item => (
+                            cvtOrder(item)
+                        )),
+                    });
+                }
+            });
+    });
+}
+
+export const promulgatorComfirm = (orderId) => {
+    return new Promise((resolve) => {
+        nebPay.call(config[env]['contract_address'], 0, 'promulgatorComfirm',
+            JSON.stringify([orderId]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    if (res.txhash) {
+                        resolve(res);
+                    }
+                }
+            });
+    });
+}
+
+export const promulgatorCancel = (orderId) => {
+    return new Promise((resolve) => {
+        nebPay.call(config[env]['contract_address'], 0, 'promulgatorCancel',
+            JSON.stringify([orderId]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    if (res.txhash) {
+                        resolve(res);
+                    }
+                }
+            });
+    });
+}
+
+export const userComfirm = (orderId) => {
+    return new Promise((resolve) => {
+        nebPay.call(config[env]['contract_address'], 0, 'userComfirm',
+            JSON.stringify([orderId]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    if (res.txhash) {
+                        resolve(res);
+                    }
+                }
+            });
+    });
+}
+
+export const userCancel = (orderId) => {
+    return new Promise((resolve) => {
+        nebPay.call(config[env]['contract_address'], 0, 'userCancel',
+            JSON.stringify([orderId]), {
+                qrcode: {
+                    showQRCode: false
+                },
+                listener: (res) => {
+                    if (res.txhash) {
+                        resolve(res);
+                    }
+                }
+            });
+    });
+}

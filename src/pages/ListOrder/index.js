@@ -9,13 +9,57 @@ import { withRouter } from 'react-router';
 import PageHeader from '../../components/Header';
 import OrderRow from '../../components/OrderRow';
 
-import { getOrderList } from '../../dataAdapter';
+import {getOrderList, promulgatorCancel, promulgatorComfirm, userCancel, userComfirm} from '../../dataAdapter';
 
 class OrderPage extends Component {
     state = {
         activeItem: '待确认',
         list: [],
         status: 0,
+        ifWaitforWriteChainDialogOpen: false,
+    }
+
+    handleCloseTransactionDelatNoteDialog = () => {
+        this.setState({
+            ifWaitforWriteChainDialogOpen: false,
+        })
+    }
+
+    handlePromulgatorComfirm = (orderId) => () => {
+        console.log(this.state.status)
+        promulgatorComfirm(orderId)
+            .then((res) => {
+                this.setState({
+                    ifTransactionDelayNoteDialogOpen: true,
+                })
+            })
+    }
+
+    handlePromulgatorCancel = (orderId) => () => {
+        promulgatorCancel(orderId)
+            .then((res) => {
+                this.setState({
+                    ifTransactionDelayNoteDialogOpen: true,
+                })
+            })
+    }
+
+    handleUserComfirm = (orderId) => () => {
+        userComfirm(orderId)
+            .then((res) => {
+                this.setState({
+                    ifTransactionDelayNoteDialogOpen: true,
+                })
+            })
+    }
+
+    handleUserCancel = (orderId) => () => {
+        userCancel(orderId)
+            .then((res) => {
+                this.setState({
+                    ifTransactionDelayNoteDialogOpen: true,
+                })
+            })
     }
 
     componentDidMount() {
@@ -109,6 +153,11 @@ class OrderPage extends Component {
                                     this.state.list.map(item => (
                                         <OrderRow
                                             key={item.orderId}
+                                            pageStatus={this.state.status}
+                                            promulgatorCancel={this.handlePromulgatorCancel}
+                                            promulgatorComfirm={this.handlePromulgatorComfirm}
+                                            userCancel={this.handleUserCancel}
+                                            userComfirm={this.handleUserComfirm}
                                             {...item}
                                         />
                                     ))
@@ -116,6 +165,40 @@ class OrderPage extends Component {
                             </Table.Body>
                         </Table>
                     </Segment>
+
+                    <Modal
+                        open={this.state.ifWaitforWriteChainDialogOpen}
+                        style={{
+                            backgroundColor: '#fff'
+                        }}
+                    >
+                        <Modal.Header
+                            style={{
+                                textAlign: 'center',
+                                backgroundColor: '#fff'
+                            }}
+                        >
+                            温馨提示
+                        </Modal.Header>
+                        <Modal.Content
+                            style={{
+                                textAlign: 'center',
+                                backgroundColor: '#fff'
+                            }}
+                        >
+                            交易需要15s左右的时间写入区块链，您可以浏览其他内容，请稍后查看。
+                        </Modal.Content>
+                        <Modal.Actions
+                            style={{
+                                textAlign: 'center',
+                                backgroundColor: '#fff'
+                            }}
+                        >
+                            <Button
+                                onClick={this.handleCloseTransactionDelatNoteDialog}
+                            >确定</Button>
+                        </Modal.Actions>
+                    </Modal>
                 </div>
             </div>
         );

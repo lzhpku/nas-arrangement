@@ -26,12 +26,6 @@ class DisplayArrangement extends Component {
     }
     applyOrder = () => {
         this.handleTriggerOpenPriceDialog();
-        // applyArrangement(this.props.match.params.arrangementId, this.state.price)
-        //     .then(res => {
-        //         this.setState({
-        //             ifWaitforWriteChainDialogOpen: true,
-        //         })
-        //     })
     }
     handleTriggerOpenPriceDialog = () => {
         this.setState({
@@ -213,7 +207,6 @@ class DisplayArrangement extends Component {
                         >
                             <Icon name='checkmark'/> 确定
                         </Button>
-
                     </Modal.Actions>
                 </Modal>
 
