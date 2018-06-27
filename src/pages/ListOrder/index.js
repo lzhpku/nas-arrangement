@@ -41,13 +41,18 @@ class OrderPage extends Component {
                         tabular
                     >
                         <Menu.Item
+                            name='待确认'
+                            active={activeItem === '待确认'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
                             name='进行中'
                             active={activeItem === '进行中'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='已结束'
-                            active={activeItem === '已结束'}
+                            name='已完成'
+                            active={activeItem === '已完成'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item

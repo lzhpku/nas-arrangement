@@ -26,6 +26,7 @@ const cvtArrangement = (arrangement) => {
         createTime,
         paidCount,
         orderedCount,
+        status,
         arrangementId,
     } = arrangement;
     return {
@@ -45,6 +46,7 @@ const cvtArrangement = (arrangement) => {
         createTime,
         paidCount,
         orderedCount,
+        status,
         arrangementId,
     };
 }

@@ -19,6 +19,8 @@ class Arrangement extends Component {
             pic3,
             description,
             price,
+            orderedCount,
+            status,
         } = this.props;
         this.props.onChange({
             title,
@@ -32,9 +34,12 @@ class Arrangement extends Component {
             pic3,
             description,
             price,
+            orderedCount,
+            status,
             [type]: e1.target.value || e2.value,
         });
         console.log(this.props.type);
+        console.log(this.props.status);
     }
 
     render() {
@@ -49,6 +54,8 @@ class Arrangement extends Component {
             pic2,
             pic3,
             description,
+            orderedCount,
+            status,
         } = this.props;
         return (
             <div
@@ -103,38 +110,38 @@ class Arrangement extends Component {
                                 onChange={this.handleChange('title')}
                             />
 
-                            {/*<div*/}
-                                {/*style={{*/}
-                                    {/*display: this.props.type == 'read' ? 'inline-flex' : 'none',*/}
-                                {/*}}*/}
-                            {/*>*/}
-                                {/*<Button*/}
-                                    {/*as='div'*/}
-                                    {/*labelPosition='right'*/}
-                                {/*>*/}
-                                    {/*<Button*/}
-                                        {/*onClick={this.props.onLike}*/}
-                                        {/*color='pink'*/}
-                                        {/*style={{*/}
-                                            {/*backgroundColor: '#f798b4',*/}
-                                        {/*}}*/}
-                                    {/*>*/}
-                                        {/*<Icon name='heart'/>*/}
-                                        {/*喜欢*/}
-                                    {/*</Button>*/}
-                                    {/*<Label*/}
-                                        {/*as='a'*/}
-                                        {/*basic*/}
-                                        {/*pointing='left'*/}
-                                        {/*style={{*/}
-                                            {/*color: '#f798b4',*/}
-                                            {/*borderColor: '#f798b4',*/}
-                                        {/*}}*/}
-                                    {/*>*/}
-                                        {/*{fondCount}*/}
-                                    {/*</Label>*/}
-                                {/*</Button>*/}
-                            {/*</div>*/}
+                            <div
+                                style={{
+                                    display: this.props.type == 'read' && status == 1 ? 'inline-flex' : 'none',
+                                }}
+                            >
+                                <Button
+                                    as='div'
+                                    labelPosition='right'
+                                >
+                                    <Button
+                                        onClick={this.props.onLike}
+                                        color='pink'
+                                        style={{
+                                            backgroundColor: '#f798b4',
+                                        }}
+                                    >
+                                        <Icon name='heart'/>
+                                        约TA
+                                    </Button>
+                                    <Label
+                                        as='a'
+                                        basic
+                                        pointing='left'
+                                        style={{
+                                            color: '#f798b4',
+                                            borderColor: '#f798b4',
+                                        }}
+                                    >
+                                        {orderedCount}
+                                    </Label>
+                                </Button>
+                            </div>
                         </div>
 
 
@@ -480,6 +487,8 @@ Arrangement.defaultProps = {
     pic2: '',
     pic3: '',
     description: '',
+    orderedCount: 0,
+    status: '',
     onChange: () => {},
 };
 
