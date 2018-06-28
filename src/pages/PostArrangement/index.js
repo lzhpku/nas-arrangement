@@ -97,7 +97,8 @@ class PostArrangement extends Component {
                                 onClick={this.handleTriggerOpenPriceDialog}
                                 disabled={!this.state.title || !this.state.nick || !this.state.sex || !this.state.age || !this.state.description}
                                 style={{
-                                    width: '200px'
+                                    width: '200px',
+                                    backgroundColor: '#fffff0',
                                 }}
                             >发布</Button>
                         }>
@@ -105,9 +106,11 @@ class PostArrangement extends Component {
                             style={{
                                 textAlign: 'center',
                                 width: '100%',
-                                backgroundColor: '#fff'
+                                backgroundColor: '#fffff0'
                             }}
-                        >设置付费金额</Modal.Header>
+                        >
+                            设置付费金额
+                        </Modal.Header>
                         <Modal.Content
                             style={{
                                 textAlign: 'center',

@@ -169,13 +169,13 @@ class OrderPage extends Component {
                     <Modal
                         open={this.state.ifWaitforWriteChainDialogOpen}
                         style={{
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         <Modal.Header
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fff'
+                                backgroundColor: '#fffff0'
                             }}
                         >
                             温馨提示
@@ -183,7 +183,7 @@ class OrderPage extends Component {
                         <Modal.Content
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fff'
+                                backgroundColor: '#fffff0'
                             }}
                         >
                             交易需要15s左右的时间写入区块链，您可以浏览其他内容，请稍后查看。
@@ -191,7 +191,7 @@ class OrderPage extends Component {
                         <Modal.Actions
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fff'
+                                backgroundColor: '#fffff0'
                             }}
                         >
                             <Button

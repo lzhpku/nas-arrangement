@@ -64,7 +64,7 @@ class OrderRow extends Component {
                         basic
                         style={{
                             border: 'none',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                             paddingLeft: 0,
                             display: this.props.operation == false && this.props.pageStatus == 0 ? 'block' : 'none',
                         }}
@@ -75,7 +75,7 @@ class OrderRow extends Component {
                         basic
                         style={{
                             border: 'none',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                             paddingLeft: 0,
                             display: this.props.operation == false && this.props.pageStatus == 1 ? 'block' : 'none',
                         }}
@@ -86,7 +86,7 @@ class OrderRow extends Component {
                         basic
                         style={{
                             border: 'none',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                             paddingLeft: 0,
                             display: this.props.pageStatus == 3 ? 'block' : 'none',
                         }}
@@ -97,7 +97,7 @@ class OrderRow extends Component {
                         basic
                         style={{
                             border: 'none',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                             paddingLeft: 0,
                             display: this.props.pageStatus == 2 ? 'block' : 'none',
                         }}

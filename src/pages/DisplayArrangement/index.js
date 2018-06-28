@@ -90,7 +90,7 @@ class DisplayArrangement extends Component {
                         style={{
                             textAlign: 'center',
                             width: '100%',
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         您与{this.state.nick}的《{this.state.title}》约会心愿单
@@ -100,7 +100,7 @@ class DisplayArrangement extends Component {
                             basic
                             style={{
                                 border: 'none',
-                                backgroundColor: '#fff',
+                                backgroundColor: '#fffff0',
                                 fontSize: '16px',
                                 paddingLeft: 0,
                                 paddingRight: 0,
@@ -115,7 +115,7 @@ class DisplayArrangement extends Component {
                             basic
                             style={{
                                 border: 'none',
-                                backgroundColor: '#fff',
+                                backgroundColor: '#fffff0',
                                 fontSize: '16px',
                                 paddingLeft: 0,
                                 paddingRight: 0,
@@ -132,7 +132,7 @@ class DisplayArrangement extends Component {
                             value={this.state.contract}
                             onChange={this.handleChangeContract}
                             style={{
-                                backgroundColor: '#fff',
+                                backgroundColor: '#fffff0',
                                 width: '90%',
                                 paddingTop: 30,
                             }}
@@ -143,7 +143,7 @@ class DisplayArrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -160,7 +160,7 @@ class DisplayArrangement extends Component {
                             value={this.state.userDescription}
                             onChange={this.handleChangeUserDescription}
                             style={{
-                                backgroundColor: '#fff',
+                                backgroundColor: '#fffff0',
                                 width: '90%',
                                 paddingTop: 30,
                             }}
@@ -171,7 +171,7 @@ class DisplayArrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -193,7 +193,7 @@ class DisplayArrangement extends Component {
                     <Modal.Actions
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         <Button
@@ -213,13 +213,13 @@ class DisplayArrangement extends Component {
                 <Modal
                     open={this.state.ifWaitforWriteChainDialogOpen}
                     style={{
-                        backgroundColor: '#fff'
+                        backgroundColor: '#fffff0'
                     }}
                 >
                     <Modal.Header
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         温馨提示
@@ -227,7 +227,7 @@ class DisplayArrangement extends Component {
                     <Modal.Content
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         交易需要15s左右的时间写入区块链，您可以浏览其他内容，请稍后查看。
@@ -235,7 +235,7 @@ class DisplayArrangement extends Component {
                     <Modal.Actions
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fff'
+                            backgroundColor: '#fffff0'
                         }}
                     >
                         <Button

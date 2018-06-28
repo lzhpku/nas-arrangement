@@ -67,7 +67,7 @@ class Arrangement extends Component {
                 <Segment
                     clearing
                     style={{
-                        backgroundColor: '#fff',
+                        backgroundColor: '#fffff0',
                     }}
                 >
                     <Segment
@@ -76,7 +76,7 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                         }}
                     >
                         <div
@@ -182,26 +182,6 @@ class Arrangement extends Component {
                             </Card.Group>
                         </div>
 
-                        {/*<div*/}
-                            {/*style={{*/}
-                                {/*display: !this.props.ifPaid && this.props.type === 'read' ? 'block' : 'none',*/}
-                                {/*textAlign: 'center',*/}
-                            {/*}}*/}
-                        {/*>*/}
-                            {/*<Button*/}
-                                {/*color='twitter'*/}
-                                {/*style={{*/}
-                                    {/*borderRadius: '0',*/}
-                                    {/*backgroundColor: '#f798b4',*/}
-                                    {/*width: '50%',*/}
-                                {/*}}*/}
-                                {/*onClick={this.props.onPay}*/}
-                            {/*>*/}
-                                {/*<Icon name='expeditedssl'/>*/}
-                                {/*支付{this.props.price}NAS查看TA的联系方式*/}
-                            {/*</Button>*/}
-                        {/*</div>*/}
-
                         <Input
                             placeholder="焉逢/横艾"
                             transparent
@@ -219,7 +199,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -239,7 +219,7 @@ class Arrangement extends Component {
                             <Form.Field
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -286,7 +266,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -314,7 +294,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -342,7 +322,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fff',
+                                    backgroundColor: '#fffff0',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -359,7 +339,7 @@ class Arrangement extends Component {
                 <Segment
                     clearing
                     style={{
-                        backgroundColor: '#fff',
+                        backgroundColor: '#fffff0',
                         display: this.props.type == 'write' ? 'block' : 'none',
                     }}
                 >
@@ -369,7 +349,7 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                         }}
                     >
                         <Header
@@ -438,7 +418,7 @@ class Arrangement extends Component {
 
                 <Segment
                     style={{
-                        backgroundColor: '#fff',
+                        backgroundColor: '#fffff0',
                     }}
                 >
                     <Segment
@@ -447,7 +427,7 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fff',
+                            backgroundColor: '#fffff0',
                         }}
                     >
                         <Header
@@ -458,7 +438,7 @@ class Arrangement extends Component {
                         <TextArea
                             autoHeight
                             value={description}
-                            style={{ minHeight: 200, width: '100%', backgroundColor: '#fff', }}
+                            style={{ minHeight: 200, width: '100%', backgroundColor: '#fffff0', }}
                             placeholder="介绍一下您可以提供的约会内容。"
                             disabled={this.props.type === 'read'}
                             onChange={this.handleChange('description')}

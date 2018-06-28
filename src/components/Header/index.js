@@ -21,43 +21,43 @@ class Header extends Component {
             >
                 <Menu.Item
                     style={{
-                        color: '#f798b4',
+                        color: '#39beff',
                         fontSize: '24px'
                     }}
                 >
-                    PieBridge
+                    DATING
                 </Menu.Item>
 
                 <Menu.Item
-                    name='female'
+                    name='datings'
                     active={this.props.location.pathname === '/'}
                     onClick={this.handleSwitchPage('/')}
                     style={{
-                        color: '#fff',
+                        color: '#c1eeff',
                         fontSize: '16px'
                     }}
                 >
-                    倾国倾城
+                    最新约会
                 </Menu.Item>
 
                 <Menu.Item
-                    name='reviews'
+                    name='create'
                     active={this.props.location.pathname === '/post'}
                     onClick={this.handleSwitchPage('/post')}
                     style={{
-                        color: '#fff',
+                        color: '#c1eeff',
                         fontSize: '16px'
                     }}
                 >
-                    我要上桥
+                    创建约会
                 </Menu.Item>
 
                 <Menu.Item
-                    name='female'
+                    name='myDating'
                     active={this.props.location.pathname === '/orders'}
                     onClick={this.handleSwitchPage('/orders')}
                     style={{
-                        color: '#fff',
+                        color: '#c1eeff',
                         fontSize: '16px'
                     }}
                 >
@@ -69,7 +69,7 @@ class Header extends Component {
                     active={this.props.location.pathname === '/about'}
                     onClick={this.handleSwitchPage('/about')}
                     style={{
-                        color: '#fff',
+                        color: '#c1eeff',
                         fontSize: '16px'
                     }}
                 >
@@ -79,7 +79,7 @@ class Header extends Component {
                 <Menu.Item>
                     <a
                         style={{
-                            color: '#fff',
+                            color: '#c1eeff',
                             fontSize: '16px'
                         }}
                         href="mailto:piebridgenas@163.com"

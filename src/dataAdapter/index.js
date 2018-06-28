@@ -35,8 +35,6 @@ const cvtArrangement = (arrangement) => {
         nick,
         sex,
         age,
-        // tel: CryptoJS.AES.decrypt(tel, cry).toString(CryptoJS.enc.Utf8),
-        // wechat: CryptoJS.AES.decrypt(wechat, cry).toString(CryptoJS.enc.Utf8),
         address,
         profession,
         pic1,
@@ -72,7 +70,7 @@ const cvtOrder = (order) => {
         createTime,
         price,
         title,
-        contract,
+        contract: CryptoJS.AES.decrypt(contract, cry).toString(CryptoJS.enc.Utf8),
         description,
         status,
         operation,
@@ -97,8 +95,6 @@ export const postArrangement = (title,
                 nick,
                 sex,
                 age,
-                // CryptoJS.AES.encrypt(tel, cry).toString(),
-                // CryptoJS.AES.encrypt(wechat, cry).toString(),
                 address,
                 profession,
                 pic1,
@@ -122,7 +118,10 @@ export const postArrangement = (title,
 export const applyArrangement = (arrangementId, contract, description, price) => {
     return new Promise((resolve) => {
         nebPay.call(config[env]['contract_address'], price, 'applyArrangement',
-            JSON.stringify([arrangementId, contract, description]), {
+            JSON.stringify([
+                arrangementId,
+                CryptoJS.AES.encrypt(contract).toString(),
+                description]), {
                 qrcode: {
                     showQRCode: false
                 },
