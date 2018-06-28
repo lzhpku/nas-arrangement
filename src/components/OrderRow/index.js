@@ -24,7 +24,7 @@ class OrderRow extends Component {
             <Table.Row>
                 <Table.Cell>{title}</Table.Cell>
                 <Table.Cell>{new Date(createTime).toDateString()}</Table.Cell>
-                <Table.Cell>{price}</Table.Cell>
+                <Table.Cell>{price} NAS</Table.Cell>
                 <Table.Cell>{contract}</Table.Cell>
                 <Table.Cell>{description}</Table.Cell>
                 <Table.Cell>

@@ -360,7 +360,7 @@ class Arrangement extends Component {
                         />
 
                         <Input
-                            placeholder="图片链接，请填写有效的照片地址（将作为首页照片展示）"
+                            placeholder="图片链接，请填写有效的图片地址（将作为首页照片展示）"
                             transparent
                             size="large"
                             style={{
@@ -378,7 +378,7 @@ class Arrangement extends Component {
                             onChange={this.handleChange('pic1')}
                         />
                         <Input
-                            placeholder="图片链接，请填写有效的照片地址"
+                            placeholder="推荐自拍、生活照或者跟约会有关的图片"
                             transparent
                             size="large"
                             style={{
@@ -396,7 +396,7 @@ class Arrangement extends Component {
                             onChange={this.handleChange('pic2')}
                         />
                         <Input
-                            placeholder="图片链接，请填写有效的照片地址"
+                            placeholder="有趣的图片可以增加约会成功的概率哦"
                             transparent
                             size="large"
                             style={{
@@ -466,7 +466,7 @@ Arrangement.defaultProps = {
     pic3: '',
     description: '',
     orderedCount: 0,
-    status: '',
+    status: 0,
     onChange: () => {},
     applyOrder: () => {},
 };

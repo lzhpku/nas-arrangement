@@ -65,7 +65,6 @@ class OrderPage extends Component {
     componentDidMount() {
         getOrderList(0)
             .then(res => {
-                console.log(res);
                 this.setState({
                     list: res.list,
                 })
@@ -84,7 +83,6 @@ class OrderPage extends Component {
         }
         getOrderList(this.state.status)
             .then(res => {
-                console.log(res);
                 this.setState({
                     list: res.list,
                 })
@@ -115,21 +113,33 @@ class OrderPage extends Component {
                     >
                         <Menu.Item
                             name='待确认' // 0
+                            style={{
+                                color: this.state.activeItem === '待确认' ? '#000000' : '#c1eeff',
+                            }}
                             active={this.state.activeItem === '待确认'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
                             name='进行中' // 1
+                            style={{
+                                color: this.state.activeItem === '进行中' ? '#000000' : '#c1eeff',
+                            }}
                             active={this.state.activeItem === '进行中'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
                             name='已完成' // 3
+                            style={{
+                                color: this.state.activeItem === '已完成' ? '#000000' : '#c1eeff',
+                            }}
                             active={this.state.activeItem === '已完成'}
                             onClick={this.handleItemClick}
                         />
                         <Menu.Item
-                            name='已取消' // 2
+                            name='已取消' // 2'
+                            style={{
+                                color: this.state.activeItem === '已取消' ? '#000000' : '#c1eeff',
+                            }}
                             active={this.state.activeItem === '已取消'}
                             onClick={this.handleItemClick}
                         />
@@ -145,9 +155,9 @@ class OrderPage extends Component {
                                 <Table.Row>
                                     <Table.HeaderCell>约会名称</Table.HeaderCell>
                                     <Table.HeaderCell>创建时间</Table.HeaderCell>
-                                    <Table.HeaderCell>价格</Table.HeaderCell>
-                                    <Table.HeaderCell>联系方式</Table.HeaderCell>
-                                    <Table.HeaderCell>自我介绍</Table.HeaderCell>
+                                    <Table.HeaderCell>约会基金额度</Table.HeaderCell>
+                                    <Table.HeaderCell>TA的联系方式</Table.HeaderCell>
+                                    <Table.HeaderCell>TA的自我介绍</Table.HeaderCell>
                                     <Table.HeaderCell>操作</Table.HeaderCell>
                                 </Table.Row>
                             </Table.Header>

@@ -10,11 +10,11 @@ class About extends Component {
                 <PageHeader />
                 <div style={{
                     padding: '0 40px',
-                    color: '#fff',
+                    color: '#c1eeff',
                     fontSize: '14px'
                 }}>
                     <div>
-                        PieBridge（鹊桥）是一个基于星云链的交友平台，提供了用户之间发布征友信息、相互喜欢的玩法。
+                        DATING（约会吧）是一个基于星云链的约会社交平台，用户可以通过平台约玩、约饭、约电影等等实现价值交换。
                     </div>
 
                     <div
@@ -22,19 +22,19 @@ class About extends Component {
                             paddingTop: '40px'
                         }}
                     >
-                        <h3>PieBridge（鹊桥）玩法：</h3>
+                        <h3>DATING（约会吧）介绍：</h3>
                         <List>
                             <List.Item>
-                                1. 发布征友信息：用户可以点击"我要上桥"，填写征友信息和照片链接，设置联系方式需要支付的NAS后发起交易即可；
+                                1. 发布约会信息：用户可以点击"创建约会"，填写个人信息、图片链接和约会内容，设置约会基金额度，发起交易即可；
                             </List.Item>
                             <List.Item>
-                                2. 查看征友信息：应征的用户通过支付相应的NAS，可以获得"倾国倾城/玉树临风"中TA的联系方式；
+                                2. 查看约会信息：通过点击"最新约会"，用户可以看到其他人所创建的约会，发现有趣的内容；
                             </List.Item>
                             <List.Item>
-                                3. 隐藏玩法：发布过征友信息的用户，如果相互点赞，可以免费查看对方的联系方式哦~；
+                                3. 约会心仪的TA：通过点击"约TA"，填写联系方式，支付约会基金，可以发起与TA的约会，如果约会成功，相应的约会基金将转入TA的账户；
                             </List.Item>
                             <List.Item>
-                                4. 土豪玩法：点赞的时候发送的NAS将全部转入征友信息发布者的账户，土豪们尽情表达心意吧！；
+                                4. 约会TIPS：约会过程中任何一方均可以取消约会，相应的约会基金将会返回支付者账户；
                             </List.Item>
                         </List>
                     </div>
@@ -47,13 +47,13 @@ class About extends Component {
                         <h3>使用须知：</h3>
                         <List>
                             <List.Item>
-                                1. PieBridge（鹊桥）提供征友信息托管与溯源服务，并不保证信息内容真实可靠，请用户务必认真核实，因信息不实造成的损失由用户自行承担。
+                                1. DATING（约会吧）提供约会信息托管与溯源服务，并不保证信息内容真实可靠，请用户务必认真核实，因信息不实造成的损失由用户自行承担。
                             </List.Item>
                             <List.Item>
-                                2. 用户支付的NAS将直接转入征友信息发布者的账户，平台不收取任何费用。
+                                2. DATING（约会吧）通过智能合约托管约会基金，基金额度和流向透明开放，随时可查。
                             </List.Item>
                             <List.Item>
-                                3. PieBridge（鹊桥）基于星云链生态的开发，从您体验和账号安全的角度考虑，请您在使用前先安装
+                                3. DATING（约会吧）基于星云链生态的开发，从您体验和账号安全的角度考虑，请您在使用前先安装
                                 <a href="https://github.com/ChengOrangeJu/WebExtensionWallet"
                                    style={{
                                        color: '#f798b4',
@@ -71,7 +71,7 @@ class About extends Component {
                             paddingTop: '40px'
                         }}
                     >
-                        <h3>PieBridge（鹊桥），喜欢TA就给TA NAS吧，打造区块链+交友的最IN品牌！</h3>
+                        <h3>DATING（约会吧），喜欢TA就给TA NAS吧，打造区块链+交友的最IN品牌！</h3>
                     </div>
 
                 </div>
