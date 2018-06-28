@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { List } from 'semantic-ui-react';
+import { List, Card, Image } from 'semantic-ui-react';
 import PageHeader from '../../components/Header';
+import tip1 from '../../images/tip1.png';
+import tip2 from '../../images/tip2.png';
+import tip3 from '../../images/tip3.png';
+import tip4 from '../../images/tip4.png';
+import tip5 from '../../images/tip5.png';
 
 class About extends Component {
     render() {
@@ -27,15 +32,40 @@ class About extends Component {
                             <List.Item>
                                 1. 发布约会信息：用户可以点击"创建约会"，填写个人信息、图片链接和约会内容，设置约会基金额度，发起交易即可；
                             </List.Item>
+                            <Card
+                                style={{width: '100%'}}
+                            >
+                                <Image src={tip1}/>
+                            </Card>
                             <List.Item>
                                 2. 查看约会信息：通过点击"最新约会"，用户可以看到其他人所创建的约会，发现有趣的内容；
                             </List.Item>
+                            <Card
+                                style={{width: '100%'}}
+                            >
+                                <Image src={tip2}/>
+                            </Card>
                             <List.Item>
                                 3. 约会心仪的TA：通过点击"约TA"，填写联系方式，支付约会基金，可以发起与TA的约会，接下来双方就可以联系约会了，如果约会成功，相应的约会基金将转入TA的账户；
                             </List.Item>
+                            <Card
+                                style={{width: '100%'}}
+                            >
+                                <Image src={tip3}/>
+                            </Card>
                             <List.Item>
-                                4. 约会TIPS：约会过程中任何一方均可以取消约会，相应的约会基金将会返回支付者账户；
+                                4. 约会TIPS：约会过程需要双方确认，约会过程中任何一方均可以取消约会，相应的约会基金将会返回支付者账户；
                             </List.Item>
+                            <Card
+                                style={{width: '100%'}}
+                            >
+                                <Image src={tip4}/>
+                            </Card>
+                            <Card
+                                style={{width: '100%'}}
+                            >
+                                <Image src={tip5}/>
+                            </Card>
                         </List>
                     </div>
 
@@ -72,6 +102,13 @@ class About extends Component {
                         }}
                     >
                         <h3>DATING（约会吧），喜欢TA就用NAS约TA吧，打造最IN的区块链社交品牌！</h3>
+                    </div>
+                    <div
+                        style={{
+                            paddingTop: '40px',
+                            height: '300px'
+                        }}
+                    >
                     </div>
 
                 </div>
