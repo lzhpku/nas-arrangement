@@ -56,6 +56,7 @@ const cvtOrder = (order) => {
     const {
         arrangementId,
         orderId,
+        user,
         createTime,
         price,
         title,
@@ -67,6 +68,7 @@ const cvtOrder = (order) => {
     return {
         arrangementId,
         orderId,
+        user,
         createTime,
         price,
         title,
