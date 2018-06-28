@@ -56,7 +56,7 @@ class About extends Component {
                                 3. DATING（约会吧）基于星云链生态的开发，从您体验和账号安全的角度考虑，请您在使用前先安装
                                 <a href="https://github.com/ChengOrangeJu/WebExtensionWallet"
                                    style={{
-                                       color: '#f798b4',
+                                       color: '#39beff',
                                    }}
                                 >NAS钱包插件</a>，解压后添加到chrome浏览器的扩展程序即可。
                             </List.Item>
@@ -71,7 +71,7 @@ class About extends Component {
                             paddingTop: '40px'
                         }}
                     >
-                        <h3>DATING（约会吧），喜欢TA就给TA NAS吧，打造区块链+交友的最IN品牌！</h3>
+                        <h3>DATING（约会吧），喜欢TA就用NAS约TA吧，打造最IN的区块链社交品牌！</h3>
                     </div>
 
                 </div>
