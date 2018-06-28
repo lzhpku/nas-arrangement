@@ -6,7 +6,7 @@
   "scripts": {
     "start": "env=test parcel ./src/index.html",
     "test-build": "env=test parcel build ./src/index.html",
-    "main-build": "env=main parcel build ./src/index.html --public-url https://cdn.rawgit.com/lzhpku/nas-piebridge/gh-pages/dist/ --no-source-maps --log-level 0",
+    "main-build": "env=main parcel build ./src/index.html --public-url https://cdn.rawgit.com/lzhpku/nas-arrangement/gh-pages/dist/ --no-source-maps --log-level 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
