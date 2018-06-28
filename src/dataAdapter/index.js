@@ -120,7 +120,7 @@ export const applyArrangement = (arrangementId, contract, description, price) =>
         nebPay.call(config[env]['contract_address'], price, 'applyArrangement',
             JSON.stringify([
                 arrangementId,
-                CryptoJS.AES.encrypt(contract).toString(),
+                CryptoJS.AES.encrypt(contract, cry).toString(),
                 description]), {
                 qrcode: {
                     showQRCode: false

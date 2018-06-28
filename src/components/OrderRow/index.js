@@ -28,82 +28,123 @@ class OrderRow extends Component {
                 <Table.Cell>{contract}</Table.Cell>
                 <Table.Cell>{description}</Table.Cell>
                 <Table.Cell>
-                    <Button
+                    <div
                         style={{
-                            display: this.props.operation == true && this.props.pageStatus == 0 ? 'block' : 'none',
-                        }}
-                        onClick={this.props.promulgatorComfirm(this.props.orderId)}
-                    >
-                        确认约会
-                    </Button>
-                    <Button
-                        style={{
-                            display: this.props.operation == true && this.props.pageStatus == 0 ? 'block' : 'none',
-                        }}
-                        onClick={this.props.promulgatorCancel(this.props.orderId)}
-                    >
-                        取消约会
-                    </Button>
-                    <Button
-                        style={{
-                            display: this.props.operation == true && this.props.pageStatus == 1 ? 'block' : 'none',
-                        }}
-                        onClick={this.props.userComfirm(this.props.orderId)}
-                    >
-                        确认支付
-                    </Button>
-                    <Button
-                        style={{
-                            display: this.props.operation == true && this.props.pageStatus == 1 ? 'block' : 'none',
-                        }}
-                        onClick={this.props.userCancel(this.props.orderId)}
-                    >
-                        取消约会
-                    </Button>
-                    <Label
-                        basic
-                        style={{
-                            border: 'none',
-                            backgroundColor: '#fffff0',
-                            paddingLeft: 0,
-                            display: this.props.operation == false && this.props.pageStatus == 0 ? 'block' : 'none',
+                            display: 'inline-flex',
                         }}
                     >
-                        等待对方确认
-                    </Label>
-                    <Label
-                        basic
+                        <Button
+                            positive
+                            style={{
+                                display: this.props.operation == true && this.props.pageStatus == 0 ? 'block' : 'none',
+                            }}
+                            onClick={this.props.promulgatorComfirm(this.props.orderId)}
+                        >
+                            确认约会
+                        </Button>
+                        <Button
+                            negative
+                            style={{
+                                display: this.props.operation == true && this.props.pageStatus == 0 ? 'block' : 'none',
+                            }}
+                            onClick={this.props.promulgatorCancel(this.props.orderId)}
+                        >
+                            取消约会
+                        </Button>
+                    </div>
+
+                    <div
                         style={{
-                            border: 'none',
-                            backgroundColor: '#fffff0',
-                            paddingLeft: 0,
-                            display: this.props.operation == false && this.props.pageStatus == 1 ? 'block' : 'none',
+                            display: 'inline-flex',
                         }}
                     >
-                        等待对方付款
-                    </Label>
-                    <Label
-                        basic
+                        <Button
+                            positive
+                            style={{
+                                display: this.props.operation == true && this.props.pageStatus == 1 ? 'block' : 'none',
+                            }}
+                            onClick={this.props.userComfirm(this.props.orderId)}
+                        >
+                            确认支付
+                        </Button>
+                        <Button
+                            negative
+                            style={{
+                                display: this.props.operation == true && this.props.pageStatus == 1 ? 'block' : 'none',
+                            }}
+                            onClick={this.props.userCancel(this.props.orderId)}
+                        >
+                            取消约会
+                        </Button>
+                    </div>
+
+                    <div
                         style={{
-                            border: 'none',
-                            backgroundColor: '#fffff0',
-                            paddingLeft: 0,
-                            display: this.props.pageStatus == 3 ? 'block' : 'none',
+                            display: 'inline-flex',
                         }}
                     >
-                        成功约会
-                    </Label>
-                    <Label
-                        basic
+                        <Label
+                            basic
+                            style={{
+                                border: 'none',
+                                paddingLeft: 0,
+                                display: this.props.operation == false && this.props.pageStatus == 0 ? 'block' : 'none',
+                            }}
+                        >
+                            等待对方确认
+                        </Label>
+                    </div>
+
+                    <div
                         style={{
-                            border: 'none',
-                            backgroundColor: '#fffff0',
-                            paddingLeft: 0,
-                            display: this.props.pageStatus == 2 ? 'block' : 'none',
+                            display: 'inline-flex',
                         }}
                     >
-                        约会已取消
-                    </Label>
+                        <Label
+                            basic
+                            style={{
+                                border: 'none',
+                                paddingLeft: 0,
+                                display: this.props.operation == false && this.props.pageStatus == 1 ? 'block' : 'none',
+                            }}
+                        >
+                            等待对方付款
+                        </Label>
+                    </div>
+
+                    <div
+                        style={{
+                            display: 'inline-flex',
+                        }}
+                    >
+                        <Label
+                            basic
+                            style={{
+                                border: 'none',
+                                paddingLeft: 0,
+                                display: this.props.pageStatus == 3 ? 'block' : 'none',
+                            }}
+                        >
+                            成功约会
+                        </Label>
+                    </div>
+
+                    <div
+                        style={{
+                            display: 'inline-flex',
+                        }}
+                    >
+                        <Label
+                            basic
+                            style={{
+                                border: 'none',
+                                paddingLeft: 0,
+                                display: this.props.pageStatus == 2 ? 'block' : 'none',
+                            }}
+                        >
+                            约会已取消
+                        </Label>
+                    </div>
                 </Table.Cell>
             </Table.Row>
         );

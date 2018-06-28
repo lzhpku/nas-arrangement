@@ -98,7 +98,7 @@ class PostArrangement extends Component {
                                 disabled={!this.state.title || !this.state.nick || !this.state.sex || !this.state.age || !this.state.description}
                                 style={{
                                     width: '200px',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                 }}
                             >发布</Button>
                         }>
@@ -106,10 +106,10 @@ class PostArrangement extends Component {
                             style={{
                                 textAlign: 'center',
                                 width: '100%',
-                                backgroundColor: '#fffff0'
+                                backgroundColor: '#fff'
                             }}
                         >
-                            设置付费金额
+                            请设置约会基金额度
                         </Modal.Header>
                         <Modal.Content
                             style={{
@@ -129,7 +129,7 @@ class PostArrangement extends Component {
                                     textAlign: 'center',
                                     marginTop: '24px'
                                 }}
-                            >* 其他用户只有支付相应的NAS才能查看您的联系方式</div>
+                            >* 对方将为本次约会支付的NAS将在约会成功后进入您的账户</div>
                         </Modal.Content>
                         <Modal.Actions
                             style={{

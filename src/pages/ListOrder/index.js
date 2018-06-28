@@ -135,8 +135,12 @@ class OrderPage extends Component {
                         />
                     </Menu>
 
-                    <Segment attached='bottom'>
-                        <Table striped>
+                    <Segment
+                        attached='bottom'
+                    >
+                        <Table
+                            striped
+                        >
                             <Table.Header>
                                 <Table.Row>
                                     <Table.HeaderCell>约会名称</Table.HeaderCell>
@@ -169,13 +173,13 @@ class OrderPage extends Component {
                     <Modal
                         open={this.state.ifWaitforWriteChainDialogOpen}
                         style={{
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         <Modal.Header
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fffff0'
+                                backgroundColor: '#fff'
                             }}
                         >
                             温馨提示
@@ -183,7 +187,7 @@ class OrderPage extends Component {
                         <Modal.Content
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fffff0'
+                                backgroundColor: '#fff'
                             }}
                         >
                             交易需要15s左右的时间写入区块链，您可以浏览其他内容，请稍后查看。
@@ -191,7 +195,7 @@ class OrderPage extends Component {
                         <Modal.Actions
                             style={{
                                 textAlign: 'center',
-                                backgroundColor: '#fffff0'
+                                backgroundColor: '#fff'
                             }}
                         >
                             <Button

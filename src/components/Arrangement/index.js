@@ -67,7 +67,7 @@ class Arrangement extends Component {
                 <Segment
                     clearing
                     style={{
-                        backgroundColor: '#fffff0',
+                        backgroundColor: '#fff',
                     }}
                 >
                     <Segment
@@ -76,7 +76,7 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fffff0',
+                            backgroundColor: '#fff',
                         }}
                     >
                         <div
@@ -199,7 +199,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -219,7 +219,7 @@ class Arrangement extends Component {
                             <Form.Field
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -266,7 +266,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -294,7 +294,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -322,7 +322,7 @@ class Arrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -339,7 +339,7 @@ class Arrangement extends Component {
                 <Segment
                     clearing
                     style={{
-                        backgroundColor: '#fffff0',
+                        backgroundColor: '#fff',
                         display: this.props.type == 'write' ? 'block' : 'none',
                     }}
                 >
@@ -349,18 +349,18 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fffff0',
+                            backgroundColor: '#fff',
                         }}
                     >
                         <Header
                             style={{
                                 color: '#333'
                             }}
-                            as='h2' content='添加照片'
+                            as='h2' content='添加图片'
                         />
 
                         <Input
-                            placeholder="照片链接，请填写有效的照片地址（将作为首页照片展示）"
+                            placeholder="图片链接，请填写有效的照片地址（将作为首页照片展示）"
                             transparent
                             size="large"
                             style={{
@@ -378,7 +378,7 @@ class Arrangement extends Component {
                             onChange={this.handleChange('pic1')}
                         />
                         <Input
-                            placeholder="照片链接，请填写有效的照片地址"
+                            placeholder="图片链接，请填写有效的照片地址"
                             transparent
                             size="large"
                             style={{
@@ -396,7 +396,7 @@ class Arrangement extends Component {
                             onChange={this.handleChange('pic2')}
                         />
                         <Input
-                            placeholder="照片链接，请填写有效的照片地址"
+                            placeholder="图片链接，请填写有效的照片地址"
                             transparent
                             size="large"
                             style={{
@@ -418,7 +418,7 @@ class Arrangement extends Component {
 
                 <Segment
                     style={{
-                        backgroundColor: '#fffff0',
+                        backgroundColor: '#fff',
                     }}
                 >
                     <Segment
@@ -427,7 +427,7 @@ class Arrangement extends Component {
                             boxShadow: 'none',
                             width: '100%',
                             overflow: 'hidden',
-                            backgroundColor: '#fffff0',
+                            backgroundColor: '#fff',
                         }}
                     >
                         <Header
@@ -438,7 +438,7 @@ class Arrangement extends Component {
                         <TextArea
                             autoHeight
                             value={description}
-                            style={{ minHeight: 200, width: '100%', backgroundColor: '#fffff0', }}
+                            style={{ minHeight: 200, width: '100%', backgroundColor: '#fff', }}
                             placeholder="介绍一下您可以提供的约会内容。"
                             disabled={this.props.type === 'read'}
                             onChange={this.handleChange('description')}

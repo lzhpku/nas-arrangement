@@ -90,17 +90,22 @@ class DisplayArrangement extends Component {
                         style={{
                             textAlign: 'center',
                             width: '100%',
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         您与{this.state.nick}的《{this.state.title}》约会心愿单
                     </Modal.Header>
-                    <Modal.Content>
+                    <Modal.Content
+                        style={{
+                            width: '100%',
+                            backgroundColor: '#fff'
+                        }}
+                    >
                         <Label
                             basic
                             style={{
                                 border: 'none',
-                                backgroundColor: '#fffff0',
+                                backgroundColor: '#fff',
                                 fontSize: '16px',
                                 paddingLeft: 0,
                                 paddingRight: 0,
@@ -110,31 +115,32 @@ class DisplayArrangement extends Component {
                         >
                             约会价格：{this.state.price}
                         </Label>
-                        <div></div>
+
                         <Label
                             basic
                             style={{
                                 border: 'none',
-                                backgroundColor: '#fffff0',
+                                backgroundColor: '#fff',
                                 fontSize: '16px',
                                 paddingLeft: 0,
                                 paddingRight: 0,
                                 paddingTop: 30,
+                                marginLeft: 0,
                                 width: '100%',
                             }}
                         >
                             约会内容：{this.state.description}
                         </Label>
-                        <div></div>
+
                         <Input
                             transparent
                             placeholder="请留下您的联系方式，不然TA无法联系您哦"
                             value={this.state.contract}
                             onChange={this.handleChangeContract}
                             style={{
-                                backgroundColor: '#fffff0',
+                                backgroundColor: '#fff',
                                 width: '90%',
-                                paddingTop: 30,
+                                paddingTop: 20,
                             }}
                             actionPosition="left"
                             labelPosition='right'
@@ -143,7 +149,7 @@ class DisplayArrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
@@ -153,16 +159,16 @@ class DisplayArrangement extends Component {
                             </Label>
                             <input style={{textAlign: 'left', width: '100%'}}/>
                         </Input>
-                        <div></div>
+
                         <Input
                             transparent
                             placeholder="有趣的灵魂万里挑一，介绍自己增加约会的机会吧"
                             value={this.state.userDescription}
                             onChange={this.handleChangeUserDescription}
                             style={{
-                                backgroundColor: '#fffff0',
+                                backgroundColor: '#fff',
                                 width: '90%',
-                                paddingTop: 30,
+                                paddingTop: 16,
                             }}
                             actionPosition="left"
                             labelPosition='right'
@@ -171,10 +177,11 @@ class DisplayArrangement extends Component {
                                 basic
                                 style={{
                                     border: 'none',
-                                    backgroundColor: '#fffff0',
+                                    backgroundColor: '#fff',
                                     fontSize: '16px',
                                     paddingLeft: 0,
                                     paddingRight: 0,
+                                    marginLeft: 0,
                                 }}
                             >
                                 自我介绍：
@@ -193,7 +200,7 @@ class DisplayArrangement extends Component {
                     <Modal.Actions
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         <Button
@@ -213,13 +220,13 @@ class DisplayArrangement extends Component {
                 <Modal
                     open={this.state.ifWaitforWriteChainDialogOpen}
                     style={{
-                        backgroundColor: '#fffff0'
+                        backgroundColor: '#fff'
                     }}
                 >
                     <Modal.Header
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         温馨提示
@@ -227,7 +234,7 @@ class DisplayArrangement extends Component {
                     <Modal.Content
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         交易需要15s左右的时间写入区块链，您可以浏览其他内容，请稍后查看。
@@ -235,7 +242,7 @@ class DisplayArrangement extends Component {
                     <Modal.Actions
                         style={{
                             textAlign: 'center',
-                            backgroundColor: '#fffff0'
+                            backgroundColor: '#fff'
                         }}
                     >
                         <Button
