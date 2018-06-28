@@ -113,7 +113,7 @@ class DisplayArrangement extends Component {
                                 width: '100%',
                             }}
                         >
-                            约会价格：{this.state.price}
+                            约会价格：{this.state.price} NAS
                         </Label>
 
                         <Label
