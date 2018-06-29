@@ -4,7 +4,15 @@ import { Card, Label, Image, Icon } from 'semantic-ui-react';
 import { withRouter } from 'react-router';
 import defaultAvatar from '../../images/default.jpg';
 
+function randomRangeOf(num) {
+    return Math.floor(Math.random() * num);
+}
+
+const colors = ['teal', 'orange', 'blue', 'red', 'violet', 'purple']
+
 class ArrangementCard extends Component {
+
+    randomColor = colors[randomRangeOf(colors.length)]
 
     handleClick = () => {
         this.props.history.push(`/arrangement/${this.props.arrangementId}`);
@@ -23,9 +31,15 @@ class ArrangementCard extends Component {
                         overflow: 'hidden',
                     }}
                 >
-                <Image
-                    src={pic1 == "" ? defaultAvatar : pic1}
-                />
+                    <Image
+                        label={{
+                            color: this.randomColor,
+                            content: paidCount.toString() + ' 人和TA约会成功',
+                            icon: 'hotel',
+                            ribbon: true
+                        }}
+                        src={pic1 == "" ? defaultAvatar : pic1}
+                    />
                 </div>
                 <Card.Content
                     style={{
@@ -53,11 +67,7 @@ class ArrangementCard extends Component {
                                   backgroundColor: '#fff',
                               }}
                 >
-                    <div style={{float:"left", width:"50%"}}>
-                        <Icon name='user' />
-                        { paidCount } 人和TA约会成功
-                    </div>
-                    <div style={{float:"right", width:"50%"}} >
+                    <div style={{float:"left", width:"100%"}} >
                         <Icon name='user' />
                         { orderedCount } 人正在和TA约会
                     </div>
