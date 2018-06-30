@@ -27,7 +27,12 @@ class HomePage extends Component {
 
     sortList(list) {
         return list.sort(function (a, b) {
-            return b.paidCount - a.paidCount;
+            if (b.paidCount > a.paidCount) {
+                return 1;
+            } else if (b.paidCount < a.paidCount) {
+                return -1;
+            }
+            return b.orderedCount - a.orderedCount;
         });
     }
 
