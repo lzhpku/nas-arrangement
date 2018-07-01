@@ -82,7 +82,7 @@ class Header extends Component {
                             color: '#c1eeff',
                             fontSize: '16px'
                         }}
-                        href="datingnas@163.com"
+                        href="mailto:datingnas@163.com"
                     >联系我们</a>
                 </Menu.Item>
             </Menu>
