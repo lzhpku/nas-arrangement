@@ -156,8 +156,8 @@ class OrderPage extends Component {
                                     <Table.HeaderCell>约会名称</Table.HeaderCell>
                                     <Table.HeaderCell>创建时间</Table.HeaderCell>
                                     <Table.HeaderCell>约会基金额度</Table.HeaderCell>
-                                    <Table.HeaderCell>TA的联系方式</Table.HeaderCell>
-                                    <Table.HeaderCell>TA的自我介绍</Table.HeaderCell>
+                                    <Table.HeaderCell>联系方式</Table.HeaderCell>
+                                    <Table.HeaderCell>自我介绍</Table.HeaderCell>
                                     <Table.HeaderCell>操作</Table.HeaderCell>
                                 </Table.Row>
                             </Table.Header>
