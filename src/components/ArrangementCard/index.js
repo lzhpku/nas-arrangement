@@ -35,7 +35,7 @@ class ArrangementCard extends Component {
                         label={{
                             color: this.randomColor,
                             content: paidCount.toString() + ' 人和TA约会成功',
-                            icon: 'hotel',
+                            icon: 'heart',
                             ribbon: true
                         }}
                         src={pic1 == "" ? defaultAvatar : pic1}
